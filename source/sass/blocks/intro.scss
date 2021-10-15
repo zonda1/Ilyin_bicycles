@@ -55,13 +55,11 @@
 
     @media (max-width: $tablet-max-width) {
       position: absolute;
-      top: 0;
+      top: 19px;
       left: 20px;
     }
 
     @media (max-width: $mobile-max-width) {
-      position: absolute;
-      top: -28px;
       left: 15px;
     }
   }

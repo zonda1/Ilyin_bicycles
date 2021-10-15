@@ -4,10 +4,11 @@
   display: grid;
   grid-template: 1/1/1/4;
   row-gap: 20px;
-  z-index: 10;
+
 
   @media (max-width: $tablet-max-width) {
     padding: 0 57px 0;
+    z-index: 10;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -25,8 +26,12 @@
 
     @media (max-width: $tablet-max-width) {
       font-size: 18px;
-      color: black;
+      color: $black;
       margin: 4px 0 10px 0;
+    }
+
+    @media (min-width: 399px) and (max-width: 767px) {
+      color: $white;
     }
 
     @media (max-width: $mobile-max-width) {
@@ -50,6 +55,10 @@ input {
   border-radius: 6px;
   padding: 5px 0 0 27px;
 
+  &:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+
   &:hover {
     background-color: rgba($grey-4, 0.8);
   }
@@ -68,14 +77,5 @@ input {
 
     @include font-parametrs(400, 15px, 24px);
     @include rgba($dark-2, 0.5);
-    // padding: 25px 0 0 27px;
-
-    @media (max-width: $tablet-max-width) {
-      // padding: 25px 0 0 17px;
-    }
-
-    @media (max-width: $mobile-max-width) {
-      // padding: 0 0 0 23px;
-    }
   }
 }

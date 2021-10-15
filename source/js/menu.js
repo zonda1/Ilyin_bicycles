@@ -4,13 +4,6 @@ let formTel = document.querySelector('input[name="tel"]');
 let sendForm = document.querySelector('.form');
 let mainScreen = document.querySelector('.main-screen');
 let mainPage = document.querySelector('.page');
-// let maskOptions = {
-//   mask: '+7(000)000-00-00',
-//   lazy: false;
-// }
-// let mask = new IMask(formTel, maskOptions);
-
-mainScreen.classList.remove('no-js');
 
 window.onload = function () {
   if (iconBurger != null && navMain != null) {
@@ -23,12 +16,6 @@ window.onload = function () {
     });
   } else alert('нет элементов menu__burger или nav');
 
-  if (document.querySelector('.ibg') != null) {
-    setIbg();
-  } else {
-    alert('нет элемента ibg');
-  }
-
   if (formTel != null) {
     formTel.addEventListener('input', validPhone);
   } else {
@@ -36,40 +23,23 @@ window.onload = function () {
   };
 
   if (sendForm != null) {
-    // sendForm.addEventListener('submit', () => (validPhone()));
     return true;
   } else {
     alert('нет элемента form');
   }
 }
 
-// Ibg
-
-function setIbg() {
-  let ibg = document.querySelectorAll('.ibg');
-  for (let i = 0; i < ibg.length; i++) {
-    if (ibg[i].querySelector('img')) {
-      ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-    }
-  }
-}
-
-
 // Validation
 
 function validPhone() {
-  let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+  let re = /^\d[\d\(\)\ -]{4,14}\d$/;
   let myPhone = formTel.value;
   let valid = re.test(myPhone);
 
   if (valid) {
-    // formTel.setCustomValidity('');
     return valid;
   }
-  // formTel.setCustomValidity('Номер телефона введен неправильно!');
   return false;
-
-  // return valid;
 }
 
 // Scroll to the anchor

@@ -1,16 +1,19 @@
 .main-content {
   position: relative;
-  top: -515px;
-  margin-bottom: -275px;
+  background: $black url("../img/content/main-photo_dktp.jpg") 50% 0/100% 100% no-repeat;
+  padding: 310px 0 240px 0;
+  // z-index: 2;
+
 
   @media (max-width: $tablet-max-width) {
-    top: -320px;
-    margin-bottom: -320px;
+    background: url("../img/content/main-photo_tablet.jpg") 50% 0/100% auto no-repeat;
+
+    padding: 20px 0 0 0;
   }
 
   @media (max-width: $mobile-max-width) {
-    top: -343px;
-    margin-bottom: -342px;
+    background: url("../img/content/main-photo_mobile.jpg") 50% 0/100% auto no-repeat;
+    padding: 46px 0 0 0;
   }
 
   &__wrapper {

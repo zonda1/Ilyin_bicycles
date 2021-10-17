@@ -2,6 +2,7 @@ nav {
   padding: 0 21px 6px 19px;
   border-bottom: 1px solid rgba($white, 0.2);
   margin: 18px 0 0 0;
+  z-index: 5;
 
   & ul {
     @include list-reset();
@@ -22,7 +23,6 @@ nav {
     letter-spacing: -0.005em;
 
     @include rgba($white, 0.7);
-    // padding-right: 135px;
 
     &:hover {
       @include rgba($grey-3, 0.5);
@@ -84,11 +84,17 @@ nav {
 
     &.active {
       transform: translate(0, 0);
-      z-index: 15;
+      // z-index: 15;
     }
 
     &.no-js {
       transform: translate(0, 0);
+      // position: relative;
+      // top: -300px;
+      // display: block;
+      // position: relative;
+      // top: 100%;
+      // z-index: 5;
     }
   }
 }

@@ -17,7 +17,7 @@
 <body>
   <div class="wrapper">
     <main class="page">
-      <header class="main-header">
+      <header class="main-header no-js">
         <div class="main-header__row">
           <div class="main-header__menu menu">
             <div class="menu__burger no-js">
@@ -58,8 +58,8 @@
                 <a><img src="img/icons/logo.svg" alt="Логотип магазина велосипедов Moon" width="68" height="20"></a>
               </div>
             </div>
-            <form action="https://echo.htmlacademy.ru" class="form" method="POST" onsubmit="return (validPhone())"
-              autocomplete="off">
+            <form action="https://echo.htmlacademy.ru" class="form" method="POST" autocomplete="off"
+              onsubmit="return (validPhone())">
               <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
               <label for="name">
                 <input type="text" name="name" id="name" placeholder="Введите Ваше Имя" required minlength="1"

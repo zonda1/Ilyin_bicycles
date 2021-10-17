@@ -1,7 +1,6 @@
 .main-header {
   position: absolute;
   width: 100%;
-  z-index: 15;
 
   &__row {
     display: flex;
@@ -12,4 +11,8 @@
       justify-content: flex-end;
     }
   }
+}
+
+.no-js {
+  position: relative;
 }
